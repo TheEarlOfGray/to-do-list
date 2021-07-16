@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if message %}
+        <h2>{{ message }}</h2>
+    {% endif %}
+    {% for item in items %}
+        <p>{{ item.name }} <a href="/delete"><button>DELETE!</button></a></p>
+    {% endfor %}
+{% endblock %}
